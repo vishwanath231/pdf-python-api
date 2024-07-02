@@ -6,6 +6,10 @@ import io
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index():
+    return "server is running..."
+
 @app.route('/extract-tables', methods=['POST'])
 def extract_tables():
     # Check if a file is provided
